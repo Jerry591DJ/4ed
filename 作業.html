@@ -1,5 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
+    
+<script>
+$(function(){
+	$('#BackTop').click(function(){ 
+		$('html,body').animate({scrollTop:0}, 333);
+	});
+	$(window).scroll(function() {
+		if ( $(this).scrollTop() > 300 ){
+			$('#BackTop').fadeIn(222);
+		} else {
+			$('#BackTop').stop().fadeOut(222);
+		}
+	}).scroll();
+});
+</script>
 <head>
     <link rel="stylesheet" type="text/css" href="JJJJ.css">
     <meta charset="UTF-8">
@@ -8,6 +26,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+   
     <div class="header"><h1>魔物獵人</h1></div>
     <nav>
         <ul>
